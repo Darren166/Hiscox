@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StationKeypad.Tests", "Stat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StationKeypad.Services", "StationKeypad.Services\StationKeypad.Services.csproj", "{7182CF09-B147-4A1C-8E23-4E437D4F9765}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StationKeypad.Data", "StationKeypad.Data\StationKeypad.Data.csproj", "{47240DC3-FC70-4128-A428-8F6B31810DCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StationKeypad.DataModel", "StationKeypad.DataModel\StationKeypad.DataModel.csproj", "{4B2962F2-F340-4A66-86EC-38D1E5FD3FB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{7182CF09-B147-4A1C-8E23-4E437D4F9765}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7182CF09-B147-4A1C-8E23-4E437D4F9765}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7182CF09-B147-4A1C-8E23-4E437D4F9765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47240DC3-FC70-4128-A428-8F6B31810DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47240DC3-FC70-4128-A428-8F6B31810DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47240DC3-FC70-4128-A428-8F6B31810DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47240DC3-FC70-4128-A428-8F6B31810DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B2962F2-F340-4A66-86EC-38D1E5FD3FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B2962F2-F340-4A66-86EC-38D1E5FD3FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B2962F2-F340-4A66-86EC-38D1E5FD3FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B2962F2-F340-4A66-86EC-38D1E5FD3FB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

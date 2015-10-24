@@ -73,6 +73,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\StationKeypad.DataModel\StationKeypad.DataModel.csproj">
+      <Project>{4B2962F2-F340-4A66-86EC-38D1E5FD3FB7}</Project>
+      <Name>StationKeypad.DataModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StationKeypad.Services\StationKeypad.Services.csproj">
       <Project>{7182cf09-b147-4a1c-8e23-4e437d4f9765}</Project>
       <Name>StationKeypad.Services</Name>

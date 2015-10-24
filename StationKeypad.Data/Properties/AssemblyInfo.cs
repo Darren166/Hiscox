@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("StationKeypad.Tests")]
+[assembly: AssemblyTitle("StationKeypad.Data")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("StationKeypad.Tests")]
+[assembly: AssemblyProduct("StationKeypad.Data")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -22,7 +22,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("d08c3edb-b1c5-43fc-aa4d-5e7a8b1f7847")]
+[assembly: Guid("a25ccf14-d83b-4eaf-843e-3b26b76b5349")]
 
 // Version information for an assembly consists of the following four values:
 //

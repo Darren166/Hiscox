@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7182CF09-B147-4A1C-8E23-4E437D4F9765}</ProjectGuid>
+    <ProjectGuid>{47240DC3-FC70-4128-A428-8F6B31810DCC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StationKeypad.Services</RootNamespace>
-    <AssemblyName>StationKeypad.Services</AssemblyName>
+    <RootNamespace>StationKeypad.Data</RootNamespace>
+    <AssemblyName>StationKeypad.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,18 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IStationService.cs" />
-    <Compile Include="StationService.cs" />
+    <Compile Include="IStationRepository.cs" />
+    <Compile Include="StationRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StationKeypad.DataModel\StationKeypad.DataModel.csproj">
       <Project>{4B2962F2-F340-4A66-86EC-38D1E5FD3FB7}</Project>
       <Name>StationKeypad.DataModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StationKeypad.Data\StationKeypad.Data.csproj">
-      <Project>{47240dc3-fc70-4128-a428-8f6b31810dcc}</Project>
-      <Name>StationKeypad.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

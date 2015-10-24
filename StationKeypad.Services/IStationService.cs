@@ -1,8 +1,10 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using StationKeypad.DataModel;
+
 namespace StationKeypad.Services
 {
 	public interface IStationService
 	{
-		System.Collections.Generic.List<Station> GetStationsOrderedByName();
+		List<Station> GetStationsOrderedByName();
 	}
 }
