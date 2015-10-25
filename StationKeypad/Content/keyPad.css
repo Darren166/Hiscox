@@ -1,0 +1,18 @@
+﻿.input-station {
+	margin-bottom: 1rem;
+}
+
+.btn-key {
+	border-radius: 1rem;
+	font-size: 2rem;
+	padding: 0.6rem;
+}
+
+.keypad-gutter div {
+	padding: 0.5rem;
+}
+
+.station-list {
+	max-height: 32rem;
+	overflow-y: auto;
+}

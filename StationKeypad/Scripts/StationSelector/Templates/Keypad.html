@@ -1,0 +1,7 @@
+﻿<input type="text" class="form-control input-lg input-station" placeholder="Please start typing the station name..." ng-model="search" ng-trim="false" />
+<div class="col-xs-3 col-sm-2" ng-repeat="alphaKey in alphaKeys">
+	<button class="btn btn-primary btn-key btn-block" ng-click="onKeyPadClicked(alphaKey)" ng-disabled="isKeyDisabled(alphaKey)">{{alphaKey}}</button>
+</div>
+<div class="col-xs-12">
+	<button class="btn btn-primary btn-key btn-block" ng-click="onKeyPadClicked(' ')" ng-disabled="isKeyDisabled(' ')">SPACE</button>
+</div>

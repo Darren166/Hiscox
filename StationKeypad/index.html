@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Station Selector</title>
+	<link data-require="bootstrap@3.3.1" data-semver="3.3.1" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+	<script data-require="bootstrap@3.3.1" data-semver="3.3.1" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js" data-semver="1.4.7" data-require="angular.js@1.4.7"></script>
+	<script src="Scripts/StationSelector/app.js"></script>
+	<script src="Scripts/StationSelector/Controllers/keyPadController.js"></script>
+	<script src="Scripts/StationSelector/Directives/stationSelector.js"></script>
+	<script src="Scripts/StationSelector/Directives/stationList.js"></script>
+	<link href="Content/keyPad.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="container" ng-app="stationKeypad" ng-controller="KeypadController as keyPadModel">
+		<h1 class="">Station Selector</h1>
+		<div class="col-md-6 keypad-gutter row">
+			<station-selector all-stations="keyPadModel.allStations" selected-stations="keyPadModel.selectedStations" search="keyPadModel.search" ng-if="keyPadModel.allStations.length > 0" />
+		</div>
+		<div class="col-md-6 station-list">
+			<station-list selected-stations="keyPadModel.selectedStations" ng-if="keyPadModel.search" />
+		</div>
+	</div>
+</body>
+</html>
