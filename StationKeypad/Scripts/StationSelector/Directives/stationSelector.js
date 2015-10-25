@@ -12,7 +12,7 @@
 				},
 				templateUrl: "/Scripts/StationSelector/Templates/keyPad.html",
 				link: function(scope) {
-					scope.alphaKeys = "abcdefghijklmnopqrstuvwxyz";
+					scope.keys = "abcdefghijklmnopqrstuvwxyz()";
 					scope.availableKeys = "";
 					scope.search = "";
 
@@ -24,17 +24,27 @@
 						return scope.availableKeys.indexOf(key) < 0;
 					};
 
+					var stationStartsWith = function (station, text) {
+						return (station.lastIndexOf(text, 0) === 0);
+					}
+
+					var addToSelectedStations = function(station) {
+						scope.selectedStations[scope.selectedStations.length] = station;
+					}
+
+					var addToAvailableKeys = function(letter) {
+						scope.availableKeys += scope.availableKeys.indexOf(letter) < 0 ? letter : '';
+					}
+
 					scope.$watch('search', function(search) {
 						var loweredCaseSearch = search ? search.toLowerCase() : '';
 						scope.availableKeys = "";
 						scope.selectedStations = [];
-						var j = 0, i;
-						for (i = 0; i < scope.allStations.length; i++) {
-							if (scope.allStations[i].toLowerCase().lastIndexOf(loweredCaseSearch, 0) === 0) {
-								scope.selectedStations[j] = scope.allStations[i];
-								var nextLetter = scope.selectedStations[j][loweredCaseSearch.length].toLowerCase();
-								scope.availableKeys += scope.availableKeys.indexOf(nextLetter) < 0 ? nextLetter : '';
-								j++;
+						for (var i = 0; i < scope.allStations.length; i++) {
+							var station = scope.allStations[i];
+							if (stationStartsWith(station.toLowerCase(),loweredCaseSearch)) {
+								addToSelectedStations(station);
+								addToAvailableKeys(station[loweredCaseSearch.length].toLowerCase());
 							}
 						}
 					});
