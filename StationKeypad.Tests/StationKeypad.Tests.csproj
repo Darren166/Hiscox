@@ -77,6 +77,10 @@
       <Project>{4B2962F2-F340-4A66-86EC-38D1E5FD3FB7}</Project>
       <Name>StationKeypad.DataModel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StationKeypad.Data\StationKeypad.Data.csproj">
+      <Project>{47240DC3-FC70-4128-A428-8F6B31810DCC}</Project>
+      <Name>StationKeypad.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StationKeypad.Services\StationKeypad.Services.csproj">
       <Project>{7182cf09-b147-4a1c-8e23-4e437d4f9765}</Project>
       <Name>StationKeypad.Services</Name>
@@ -87,6 +91,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

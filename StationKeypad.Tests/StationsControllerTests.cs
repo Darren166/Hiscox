@@ -3,6 +3,7 @@ using System.Linq;
 using Moq;
 using NUnit.Framework;
 using StationKeypad.Controllers;
+using StationKeypad.Data;
 using StationKeypad.DataModel;
 using StationKeypad.Services;
 
@@ -11,12 +12,13 @@ namespace StationKeypad.Tests
 	[TestFixture]
 	public class StationsControllerTests
 	{
-		private StationsController createStationsControllerWithMockStationService()
+		private StationsController createStationsControllerFromMockRepository()
 		{
 			var stations = createStations();
-			var mockStationService = new Mock<IStationService>();
-			mockStationService.Setup(service => service.GetStationsOrderedByName()).Returns(stations);
-			var stationsController = new StationsController(mockStationService.Object);
+			var mockStationRepository = new Mock<IStationRepository>();
+			mockStationRepository.Setup(repository => repository.GetAllInOrder()).Returns(stations);
+			var stationService = new StationService(mockStationRepository.Object);
+			var stationsController = new StationsController(stationService);
 			return stationsController;
 		}
 
@@ -51,7 +53,7 @@ namespace StationKeypad.Tests
 		public void Returns_All_Stations()
 		{
 			// Given a stations controller with an injected mock StationService
-			var stationsController = createStationsControllerWithMockStationService();
+			var stationsController = createStationsControllerFromMockRepository();
 
 			//// When a list of all stations is requested
 			var stationNames = stationsController.GetAllStationsInOrder().ToList();
@@ -64,7 +66,7 @@ namespace StationKeypad.Tests
 		public void Returns_Stations_In_Order()
 		{
 			// Given a stations controller with an injected mock StationService
-			var stationsController = createStationsControllerWithMockStationService();
+			var stationsController = createStationsControllerFromMockRepository();
 
 			//// When a list of all stations is requested
 			var stationNames = stationsController.GetAllStationsInOrder().ToList();
