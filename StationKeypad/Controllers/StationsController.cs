@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Web.Http;
 using StationKeypad.Services;
+using WebApi.OutputCache.V2;
 
 namespace StationKeypad.Controllers
 {
@@ -14,6 +15,7 @@ namespace StationKeypad.Controllers
 			this.stationService = stationService;
 		}
 
+		[CacheOutput(ClientTimeSpan = 300, ServerTimeSpan = 300)]
 		public IEnumerable<string> GetAllStationsInOrder()
 		{
 			return stationService.GetStationsOrderedByName().Select(station => station.Name);

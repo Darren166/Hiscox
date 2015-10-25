@@ -61,7 +61,7 @@ namespace StationKeypad.App_Start
 		/// <param name="kernel">The kernel.</param>
 		private static void RegisterServices(IKernel kernel)
 		{
-			kernel.Load("StationKeypad.*.dll");
+			kernel.Load("StationKeypad*.dll");
 		}
 	}
 }
