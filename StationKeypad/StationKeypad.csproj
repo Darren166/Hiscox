@@ -118,12 +118,17 @@
     <Content Include="Scripts\jasmine\console.js" />
     <Content Include="Scripts\jasmine\jasmine-html.js" />
     <Content Include="Scripts\jasmine\jasmine.js" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\StationSelector\app.js" />
     <Content Include="Scripts\StationSelector\Controllers\keyPadController.js" />
     <Content Include="Scripts\StationSelector\Directives\stationList.js" />
     <Content Include="Scripts\StationSelector\Directives\stationSelector.js" />
     <Content Include="Scripts\StationSelector\Spec\keyPadControllerSpec.js" />
     <Content Include="Scripts\StationSelector\Spec\SpecRunner.html" />
+    <Content Include="Scripts\StationSelector\Spec\stationListDirectiveSpec.js" />
+    <Content Include="Scripts\StationSelector\Spec\stationSelectorDirectiveSpec.js" />
     <Content Include="Scripts\StationSelector\Templates\Keypad.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -140,6 +145,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

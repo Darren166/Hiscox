@@ -32,8 +32,11 @@
 						scope.selectedStations[scope.selectedStations.length] = station;
 					}
 
-					var addToAvailableKeys = function(letter) {
-						scope.availableKeys += scope.availableKeys.indexOf(letter) < 0 ? letter : '';
+					var addToAvailableKeys = function (station, loweredCaseSearch) {
+						if (station.length > loweredCaseSearch.length) {
+							var keyToAdd = station[loweredCaseSearch.length].toLowerCase();
+							scope.availableKeys += scope.availableKeys.indexOf(keyToAdd) < 0 ? keyToAdd : '';
+						}
 					}
 
 					scope.$watch('search', function(search) {
@@ -44,7 +47,7 @@
 							var station = scope.allStations[i];
 							if (stationStartsWith(station.toLowerCase(),loweredCaseSearch)) {
 								addToSelectedStations(station);
-								addToAvailableKeys(station[loweredCaseSearch.length].toLowerCase());
+								addToAvailableKeys(station,loweredCaseSearch);
 							}
 						}
 					});
