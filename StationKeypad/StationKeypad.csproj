@@ -106,13 +106,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\jasmine\jasmine.css" />
+    <Content Include="Content\jasmine\jasmine_favicon.png" />
     <Content Include="Content\keyPad.css" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\jasmine\boot.js" />
+    <Content Include="Scripts\jasmine\console.js" />
+    <Content Include="Scripts\jasmine\jasmine-html.js" />
+    <Content Include="Scripts\jasmine\jasmine.js" />
     <Content Include="Scripts\StationSelector\app.js" />
     <Content Include="Scripts\StationSelector\Controllers\keyPadController.js" />
     <Content Include="Scripts\StationSelector\Directives\stationList.js" />
     <Content Include="Scripts\StationSelector\Directives\stationSelector.js" />
+    <Content Include="Scripts\StationSelector\Spec\keyPadControllerSpec.js" />
+    <Content Include="Scripts\StationSelector\Spec\SpecRunner.html" />
     <Content Include="Scripts\StationSelector\Templates\Keypad.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -128,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Scripts\angular.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
